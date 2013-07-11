@@ -7,6 +7,7 @@ buf.toString()
 
 app.get('/', function(request, response) {
   
+var fs = require('fs');
 response.send(buf.toString('utc-8', fs.readFileSync("index.html")));
 });
 
